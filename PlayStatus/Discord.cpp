@@ -9,14 +9,14 @@ void Discord::Initialize()
 {
 	DiscordEventHandlers Handle;
 	memset(&Handle, 0, sizeof(Handle));
-	Discord_Initialize("801042776288526349", &Handle, 1, NULL); //Your Api Key
+	Discord_Initialize("KEY", &Handle, 1, NULL); //Your Api Key
 }
 
 void Discord::Update()
 {
         DiscordRichPresence discordPresence;
         memset(&discordPresence, 0, sizeof(discordPresence));
-        discordPresence.details = "Idle";
+        discordPresence.details = "Editing Movie";
         discordPresence.startTimestamp = 1507665886;
         discordPresence.endTimestamp = 1507665886;
         discordPresence.largeImageKey = "icon";

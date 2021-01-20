@@ -106,8 +106,8 @@
       <Command>xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
     </PreLinkEvent>
     <PreBuildEvent>
-      <Command>del "D:\ProgramFiles\aviutl(debug)\plugins\PlayStatus.auf"
-xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -132,8 +132,8 @@ xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Comm
       <Command>xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
     </PreLinkEvent>
     <PreBuildEvent>
-      <Command>del "D:\ProgramFiles\aviutl(debug)\plugins\PlayStatus.auf"
-xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

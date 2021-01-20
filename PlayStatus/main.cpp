@@ -5,11 +5,12 @@
 Discord* g_Discord;
 bool inited = false;
 
+char* pluginname = "PlayStatus ver.0.0.1 by YU-PEI";
 
 FILTER_DLL filter = {
 	NULL,
 	0,0,
-	NULL, //?
+	pluginname,
 	NULL,
 	NULL,NULL,
 	NULL,NULL,NULL,
@@ -21,7 +22,7 @@ FILTER_DLL filter = {
 	NULL,NULL,
 	NULL,
 	NULL,
-	"PlayStatus ver.0.0.1 by YU-PEI",
+	pluginname,
 	NULL,
 	NULL,
 };
