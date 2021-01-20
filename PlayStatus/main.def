@@ -1,0 +1,4 @@
+LIBRARY main.auf
+
+EXPORTS
+	GetFilterTable @1
