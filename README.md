@@ -1,5 +1,4 @@
 # PlayStatus
-[![Build status](https://ci.appveyor.com/api/projects/status/4dpu792q0c71gm1n/branch/master?svg=true)](https://ci.appveyor.com/project/nerrog/playstatus/branch/master)
 ## Description
 Discord Rich Presence sending plugin for Aviutl
 ## Demo
@@ -11,6 +10,6 @@ Aviutl Version1.1.0～1.0.0
 このGitHubレポジトリのReleasesからプラグイン(PlayStatus.auf)をダウンロードしてください
 Aviutlの「plugins」フォルダにそのままコピーしてください
 ## Licence
-このプラグインは[MITライセンス](LICENCE)の元でソースコードを公開しています
+このプラグインは[MITライセンス](LICENSE)の元でソースコードを公開しています
 ## Author
 [YU-PEI](https://twitter.com/nerrog_blog)
