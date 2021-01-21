@@ -7,5 +7,4 @@ class Discord {
 public:
 	void Initialize();
 	void Update();
-	//void Update_proj(char* name);
 };

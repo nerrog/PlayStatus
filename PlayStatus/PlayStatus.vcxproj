@@ -80,7 +80,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\コード\PlayStatus\PlayStatus\DiscordSDK\include;D:\コード\PlayStatus\PlayStatus\DiscordSDK\src;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)PlayStatus\DiscordSDK\include;$(SolutionDir)PlayStatus\PlayStatus\DiscordSDK\src;$(IncludePath)</IncludePath>
     <TargetExt>.auf</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

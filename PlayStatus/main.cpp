@@ -4,7 +4,6 @@
 
 Discord* g_Discord;
 bool inited = false;
-
 char* pluginname = "PlayStatus ver.0.0.1 by YU-PEI";
 
 FILTER_DLL filter = {
@@ -28,6 +27,7 @@ FILTER_DLL filter = {
 };
 
 void Init() {
+	//DiscordRPC初期化関数
 	g_Discord->Initialize();
 	g_Discord->Update();
 
@@ -35,6 +35,7 @@ void Init() {
 
 
 BOOL func_init(FILTER* fp) {
+	//フィルタプラグイン初期化関数
 	if (!inited) {
 		Init();
 		inited = true;
