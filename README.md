@@ -1,4 +1,5 @@
 # PlayStatus
+[![Build status](https://ci.appveyor.com/api/projects/status/4dpu792q0c71gm1n/branch/master?svg=true)](https://ci.appveyor.com/project/nerrog/playstatus/branch/master)
 ## Description
 Discord Rich Presence sending plugin for Aviutl
 ## Demo
