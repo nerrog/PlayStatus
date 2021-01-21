@@ -32,6 +32,7 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <UseOfMfc>false</UseOfMfc>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -74,8 +75,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\コード\PlayStatus\PlayStatus\DiscordSDK\include;D:\コード\PlayStatus\PlayStatus\DiscordSDK\src;$(IncludePath)</IncludePath>
     <TargetExt>.auf</TargetExt>
+    <IncludePath>$(SolutionDir)PlayStatus\DiscordSDK\include;$(SolutionDir)PlayStatus\DiscordSDK\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -129,7 +130,8 @@
       <AdditionalDependencies>vfw32.lib;msacm32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreLinkEvent>
-      <Command>xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
+      <Command>
+      </Command>
     </PreLinkEvent>
     <PreBuildEvent>
       <Command>
