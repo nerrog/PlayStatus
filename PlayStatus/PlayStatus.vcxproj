@@ -146,10 +146,12 @@
       </Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>デバッグ用aviutlプラグインフォルダにdllをコピーする</Message>
+      <Message>
+      </Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
