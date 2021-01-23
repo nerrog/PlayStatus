@@ -110,6 +110,12 @@
       <Command>
       </Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>デバッグ用aviutlプラグインフォルダにdllをコピーする</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -119,6 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;PLAYSTATUS_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -137,6 +144,12 @@
       <Command>
       </Command>
     </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>xcopy "$(OutDir)PlayStatus.auf" "D:\ProgramFiles\aviutl(debug)\plugins" /Y</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>デバッグ用aviutlプラグインフォルダにdllをコピーする</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
