@@ -7,4 +7,6 @@ class Discord {
 public:
 	void Initialize();
 	void Update();
+	void StateUpdate();
+	void exit();
 };

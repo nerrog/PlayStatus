@@ -5,7 +5,7 @@
 Discord* g_Discord; //DiscordRPC用のポインタ
 SYS_INFO utl_sys;
 bool inited = false;
-char* pluginName = "PlayStatus 0.0.3"; //プラグイン名・バージョン
+char* pluginName = "PlayStatus 0.0.4"; //プラグイン名・バージョン
 char* proj_name; //プロジェクト名(未実装)
 
 // フィルタプラグイン構造体
@@ -18,7 +18,7 @@ FILTER_DLL filter = {
 	NULL,NULL,NULL,	// int check_n, TCHAR **check_name, int *check_default
 	NULL,	// (*func_proc)
 	func_init,	// (*func_init)
-	NULL,	// (*func_exit)
+	func_exit,	// (*func_exit)
 	NULL,	// (*func_update)
 	NULL,	// (*func_WndProc)
 	NULL,NULL,	// reserved
@@ -32,17 +32,20 @@ FILTER_DLL filter = {
 	NULL,	// HINSTANCE dll_hinst;
 	NULL,	// void	*ex_data_def;
 	NULL,	// (*func_is_saveframe)
-	NULL,	// (*func_project_load)
-	NULL,	// (*func_project_save)
+	func_project_load,	// (*func_project_load)
+	func_project_save,	// (*func_project_save)
 	NULL,	// (*func_modify_title)
 	NULL,	// TCHAR *dll_path;
 };
-void Init() {
-	//DiscordRPC初期化関数
-	g_Discord->Initialize();
-	g_Discord->Update();
-}
 
+// SYS_INFOを取得してRPCをアップデートする関数
+void update_edit_name(FILTER* fp, void* editp)
+{
+	//SYS_INFOの取得
+	fp->exfunc->get_sys_info(editp, &utl_sys);
+	//RPCアップデート
+	g_Discord->StateUpdate();
+}
 
 BOOL func_init(FILTER* fp) {
 	//フィルタプラグイン初期化関数
@@ -50,16 +53,32 @@ BOOL func_init(FILTER* fp) {
 		//SYS_INFOの取得
 		fp->exfunc->get_sys_info(nullptr, &utl_sys);
 
-		//初期化
-		Init();
+		//RPC初期化
+		g_Discord->Initialize();
+		g_Discord->Update();
 		inited = true;
 	}
 	return TRUE;
 }
 
+BOOL func_project_load(FILTER* fp, void* editp, void* data, int size)
+{
+	update_edit_name(fp, editp);
+	return TRUE;
+}
+
+BOOL func_project_save(FILTER* fp, void* editp, void* data, int* size)
+{
+	update_edit_name(fp, editp);
+	return TRUE;
+}
+
 BOOL func_exit(FILTER* fp)
 {
-	return 0;
+	//RPC切断
+	g_Discord->exit();
+
+	return TRUE;
 }
 
 
