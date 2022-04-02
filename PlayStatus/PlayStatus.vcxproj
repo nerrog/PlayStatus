@@ -193,6 +193,7 @@
     <ClInclude Include="DiscordSDK\src\rpc_connection.h" />
     <ClInclude Include="DiscordSDK\src\serialization.h" />
     <ClInclude Include="filter.h" />
+    <ClInclude Include="RPC_State.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Discord.cpp" />

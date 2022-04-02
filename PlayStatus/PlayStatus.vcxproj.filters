@@ -36,6 +36,9 @@
     <ClInclude Include="filter.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="RPC_State.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DiscordSDK\src\connection_win.cpp">
